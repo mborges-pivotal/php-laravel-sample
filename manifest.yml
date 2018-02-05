@@ -1,0 +1,10 @@
+---
+applications:
+- name: laravel
+  memory: 128M
+  instances: 1
+  path: .
+  services: [ postgresql, redis ]
+  buildpack: php_buildpack
+  env:
+    BP_DEBUG: "False"

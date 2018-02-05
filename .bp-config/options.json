@@ -1,0 +1,6 @@
+{
+    "WEB_SERVER": "nginx",
+    "WEBDIR": "public",
+    "PHP_VERSION": "PHP_70_LATEST",
+    "COMPOSER_VENDOR_DIR": "vendor"
+}
