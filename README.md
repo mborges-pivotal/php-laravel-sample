@@ -7,6 +7,7 @@ A sample code of PHP with Laravel
 $ git clone https://github.com/mborges-pivotal/php-laravel-sample.git
 $ cd php-laravel-sample/
 $ composer install
+$ cp .env.example .env
 $ php artisan key:generate
 $ php artisan serve
 ```
