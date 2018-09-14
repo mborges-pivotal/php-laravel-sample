@@ -1,20 +1,19 @@
-# php-laravel-hello-world
-A sample code of PHP with Laravel from [niwasawa/php-laravel-hello-world](https://github.com/niwasawa/php-laravel-hello-world). We didn't fork because we'll modify to include additional tests to support postgres, redis and twilio. We'll also include concourse pipeline and create a docker image.
+# php-laravel-sample
+A sample code of PHP with Laravel 
 
 ## Deploy this app to localhost
 
 ```
-$ git clone https://github.com/niwasawa/php-laravel-hello-world.git
-$ cd php-laravel-hello-world/
+$ git clone https://github.com/mborges-pivotal/php-laravel-sample.git
+$ cd php-laravel-sample/
 $ composer install
+$ php artisan key:generate
 $ php artisan serve
 ```
 
 Access to
 
 - http://127.0.0.1:8000/
-- http://127.0.0.1:8000/hello/
-- http://127.0.0.1:8000/world/
 
 ## Running on Cloud Foundry
 
@@ -25,7 +24,7 @@ Access to
 {
     "WEB_SERVER": "nginx",
     "WEBDIR": "public",
-    "PHP_VERSION": "PHP_70_LATEST",
+    "PHP_VERSION": "{PHP_72_LATEST}",
     "COMPOSER_VENDOR_DIR": "vendor"
 }
 ```
@@ -40,7 +39,7 @@ applications:
   memory: 128M
   instances: 1
   path: .
-  services: [ postgresql, redis ]
+  services: []
   buildpack: php_buildpack
   env:
     BP_DEBUG: "False"
